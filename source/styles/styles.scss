@@ -2,6 +2,20 @@
 @import "./common/variables.scss";
 @import "./common/global.scss";
 @import "./common/fonts.scss";
+@import "./common/visually-hidden.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/promo.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/nutrition.scss";
+@import "./blocks/example.scss";
+@import "./blocks/result.scss";
+@import "./blocks/address.scss";
+@import "./blocks/copyright.scss";
+@import "./blocks/gallary.scss";
+@import "./blocks/extra-goods.scss";
+@import "./blocks/good-card.scss";
+@import "./blocks/email-form.scss";
+@import "./blocks/button.scss";
+@import "./blocks/page-wrapper.scss";

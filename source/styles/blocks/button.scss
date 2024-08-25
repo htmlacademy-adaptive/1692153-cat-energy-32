@@ -1,0 +1,13 @@
+.button {
+  text-align: center;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  width: 280px;
+  padding: 10px 44px;
+  color: $light-text-color;
+  background-color: $decoration-color;
+  border: none;
+  cursor: pointer;
+}
