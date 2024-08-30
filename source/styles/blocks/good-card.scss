@@ -6,7 +6,11 @@
   text-transform: uppercase;
 }
 
-.good-card__discription,
+.good-card__discription {
+  line-height: 14px;
+  color: $primary-text-color;
+}
+
 .good-card__price {
   line-height: 14px;
   color: $primary-text-color;

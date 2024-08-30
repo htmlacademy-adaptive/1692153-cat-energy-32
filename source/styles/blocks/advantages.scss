@@ -1,10 +1,13 @@
 .advantages__title {
+  // position: relative;
   font-family: $secondary-font;
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
   color: $title-color;
   text-transform: uppercase;
+  padding-left: 70px;
+  margin-bottom: 29px;
 }
 
 .advantages__description {
@@ -12,9 +15,42 @@
 }
 
 .advantages__link {
+  position: relative;
   font-family: $secondary-font;
   font-style: 16px;
   line-height: 16px;
   color: $title-color;
   text-transform: uppercase;
+}
+
+.advantages__link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 6px;
+  left: 85px;
+  width: 32px;
+  height: 10px;
+  background-image: url("../../icons/stack.svg#icon-arrow");
+  background-repeat: no-repeat;
+}
+
+.advantages__item--cat-slim::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../../icons/stack.svg#cat-slim");
+  background-repeat: no-repeat;
+}
+
+.advantages__item--cat-pro::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 67px;
+  height: 50px;
+  background-image: url("../../icons/stack.svg#cat-pro");
+  background-repeat: no-repeat;
 }
