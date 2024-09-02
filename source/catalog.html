@@ -16,21 +16,25 @@
 <body class="page__body">
   <div class="page-wrapper">
     <header class="main-header">
-      <a class="main-header__logo logo" href="#">
-        <img class="logo__image" src="images/content-vector/mobile-logo.svg" width="33" height="38" alt="Декоративный логотип кота">
-        <img class="logo__text" src="images/content-vector/text-logo.svg" width="101" height="18" alt="Логотип с надписью Кэт энерджи">
+      <a class="main-header__logo logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="images/content-vector/desktop-logo.svg" width="70" height="59" type="image/svg+xml">
+          <source media="(min-width: 768px)" srcset="images/content-vector/tablet-logo.svg" width="60" height="50" type="image/svg+xml">
+          <img class="logo__image" src="images/content-vector/mobile-logo.svg" width="33" height="38" alt="Декоративный логотип кота">
+        </picture>
+        <img class="logo__text" src="images/content-vector/text-logo.svg" width="101" height="20" alt="Логотип с надписью Кэт энерджи">
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <button class="main-header__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <nav class="main-nav main-nav--closed">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list ">
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--current">
               <a href="index.html">Главная</a>
             </li>
-            <li class="main-nav__item main-nav__item--current">
-              <a href="catalog.html">Каталог продукции</a>
+            <li class="main-nav__item">
+              <a href="catalog.html">Каталог продукции.</a>
             </li>
             <li class="main-nav__item">
               <a href="#">Подбор программы</a>
@@ -181,13 +185,14 @@
           <li class="gallery__more-goods more-goods">
             <p class="more-goods__other-goods"><b>Показать еще 100500 товаров</b></p>
             <p class="more-goods__description">На самом деле вкусов гораздо больше!</p>
-            <button class="more-goods__button button" type="button">Показать все</button>
+            <button class="more-goods__button" type="button">Показать все</button>
           </li>
         </ul>
       </section>
       <section class="extra-goods">
         <div class="extra-goods__wrapper">
           <h2 class="extra-goods__title">Дополнительные товары</h2>
+          <hr>
           <ul class="extra-goods__list">
             <li class="extra-goods__item good-card">
               <h3 class="good-card__title">Сахарозаменитель</h3>
@@ -197,6 +202,7 @@
               </div>
               <button class="extra-goods__button button" type="button">Заказать</button>
             </li>
+            <hr>
             <li class="extra-goods__item good-card">
               <h3 class="good-card__title">Питьевая вода</h3>
               <div class="good-card__wrapper">
@@ -205,6 +211,7 @@
               </div>
               <button class="extra-goods__button button" type="button">Заказать</button>
             </li>
+            <hr>
             <li class="extra-goods__item good-card">
               <h3 class="good-card__title">Молоко</h3>
               <div class="good-card__wrapper">
@@ -213,6 +220,7 @@
               </div>
               <button class="extra-goods__button button" type="button">Заказать</button>
             </li>
+            <hr>
             <li class="extra-goods__item good-card">
               <h3 class="good-card__title">Витамины</h3>
               <div class="good-card__wrapper">
@@ -221,6 +229,7 @@
               </div>
               <button class="extra-goods__button button" type="button">Заказать</button>
             </li>
+            <hr>
           </ul>
           <p class="extra-goods__gift">
             Закажите все<br>и получите чехол для<br>кота в подарок!
@@ -228,14 +237,14 @@
         </div>
       </section>
       <section class="email-form">
-        <form class="form-fields" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="form-fields" action="https://echo.htmlacademy.ru/" method="post">
           <h2 class="email-form__title">Акции и новинки</h2>
           <label class="email-form__label" for="email">Подпишитесь на наши новости и не<br>пропустите ни одного предложения!</label><br>
           <input class="email-form__input" type="text" name="email" id="email" placeholder="кuklachev@gmail.com"><br>
           <button class="email-form__button button" type="submit">Подписаться</button>
         </form>
       </section>
-      <section class="address">
+      <section class="address address--catalog">
         <div class="address__wrapper">
           <h2 class="visually-hidden">Адрес Cat Energy</h2>
           <p class="address__invitation">Приглашаем к сотрудничеству дилеров!</p>
@@ -253,6 +262,7 @@
         <a class="main-footer__logo" href="#">
           <img src="images/content-vector/text-logo.svg" width="128" height="24" alt="Логотип Кэт энерджи">
         </a>
+        <hr>
         <div class="main-footer__social social">
           <ul class="social__list">
             <li class="social__item">
@@ -281,6 +291,7 @@
             </li>
           </ul>
         </div>
+        <hr>
         <div class="main-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
             <img class="copyright__link-logo" src="images/content-vector/html-academy-logo.svg" width="27" height="34" alt="Логотип Академии HTML">

@@ -21,18 +21,34 @@
   line-height: 16px;
   color: $title-color;
   text-transform: uppercase;
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 6px;
+    left: 85px;
+    width: 32px;
+    height: 10px;
+    background-image: url("../../icons/stack.svg#icon-arrow");
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    transition: transform 0.3s linear;
+    transform-origin: left center;
+  }
+
+  &:is(:hover, :active, :focus-visible, :focus)::after {
+    transform: scale(1.35);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.advantages__link::after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 6px;
-  left: 85px;
-  width: 32px;
-  height: 10px;
-  background-image: url("../../icons/stack.svg#icon-arrow");
-  background-repeat: no-repeat;
+.advantages__item {
+  background-color: $basic-background;
 }
 
 .advantages__item--cat-slim::before {

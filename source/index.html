@@ -16,21 +16,25 @@
 <body class="page__body">
   <div class="page-wrapper">
     <header class="main-header">
-      <a class="main-header__logo logo" href="#">
-        <img class="logo__image" src="images/content-vector/mobile-logo.svg" width="33" height="38" alt="Декоративный логотип кота">
-        <img class="logo__text" src="images/content-vector/text-logo.svg" width="101" height="18" alt="Логотип с надписью Кэт энерджи">
+      <a class="main-header__logo logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="images/content-vector/desktop-logo.svg" width="70" height="59" type="image/svg+xml">
+          <source media="(min-width: 768px)" srcset="images/content-vector/tablet-logo.svg" width="60" height="50" type="image/svg+xml">
+          <img class="logo__image" src="images/content-vector/mobile-logo.svg" width="33" height="38" alt="Декоративный логотип кота">
+        </picture>
+        <img class="logo__text" src="images/content-vector/text-logo.svg" width="101" height="20" alt="Логотип с надписью Кэт энерджи">
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <button class="main-header__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <nav class="main-nav main-nav--closed">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list ">
             <li class="main-nav__item main-nav__item--current">
               <a href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="catalog.html">Каталог продукции.</a>
+              <a href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
               <a href="#">Подбор программы</a>
@@ -65,7 +69,8 @@
                 Energy Slim поможет вашему<br>
                 питомцу сбросить лишний вес.
               </p>
-              <a class="advantages__link" href="#">Каталог slim</a>
+              <hr>
+              <a class="advantages__link" href="catalog.html">Каталог slim</a>
             </li>
             <li class="advantages__item advantages__item--cat-pro">
               <h3 class="advantages__title ">Набор массы</h3>
@@ -75,7 +80,8 @@
                 Серия Cat Energy Pro поможет<br>
                 вашему коту нарастить необходимые мышцы!
               </p>
-              <a class="advantages__link" href="#">Каталог pro</a>
+              <hr>
+              <a class="advantages__link" href="catalog.html">Каталог pro</a>
             </li>
           </ul>
         </div>
@@ -125,14 +131,19 @@
           <dd class="result__text">затрачено времени</dd>
         </dl>
         <p class="result__cost"><b>Затраты на питание: 15 000 РУБ.</b></p><br>
-        <picture>
-          <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/content-images/fat-cat-slider-tablet@1x.png 1x, images/content-images/fat-cat-slider-mobile@2x.png 2x">
-          <img class="result__fat-cat" src="images/content-images/fat-cat-slider-mobile@1x.png" srcset="images/content-images/fat-cat-slider-mobile@2x.png 2x" width="280" height="256" alt="Фотография толстого кота">
-        </picture>
-        <picture>
-          <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/content-images/thin-cat-slider-tablet@1x.png 1x, images/content-images/thin-cat-slider-tablet@2x.png 2x">
-          <img class="result__thin-cat" src="images/content-images/thin-cat-slider-mobile@1x.png" srcset="images/content-images/thin-cat-slider-mobile@2x.png 2x" width="280" height="256" alt="Фотография худого кота">
-        </picture>
+        <div class="example__slider slider">
+          <picture>
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/content-images/fat-cat-slider-tablet@1x.png 1x, images/content-images/fat-cat-slider-mobile@2x.png 2x">
+            <img class="result__fat-cat" src="images/content-images/fat-cat-slider-mobile@1x.png" srcset="images/content-images/fat-cat-slider-mobile@2x.png 2x" width="280" height="256" alt="Фотография толстого кота">
+          </picture>
+          <picture>
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/content-images/thin-cat-slider-tablet@1x.png 1x, images/content-images/thin-cat-slider-tablet@2x.png 2x">
+            <img class="result__thin-cat" src="images/content-images/thin-cat-slider-mobile@1x.png" srcset="images/content-images/thin-cat-slider-mobile@2x.png 2x" width="280" height="256" alt="Фотография худого кота">
+          </picture>
+          <button class="slider__button" type="button">
+            <span class="visually-hidden">Иконка управлением слайдером</span>
+          </button>
+        </div>
       </section>
       <section class="address">
         <div class="address__wrapper">
@@ -152,37 +163,30 @@
         <a class="main-footer__logo" href="#">
           <img src="images/content-vector/text-logo.svg" width="128" height="24" alt="Логотип Кэт энерджи">
         </a>
+        <hr>
         <div class="main-footer__social social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">Мы ВКонтакте</span>
-                <picture>
-                  <img src="images/content-vector/vkontakte-icon.svg" width="27" height="17" alt="Иконка ВКонтакте">
-                </picture>
+                <span class="visually-hidden">Логотип ВКонтакте</span>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">Мы в Ютубе</span>
-                <picture>
-                  <img src="images/content-vector/youtube-icon.svg" width="24" height="19" alt="Иконка Ютуб">
-                </picture>
+              <a class="social__link social__link--youtube" href="#">
+                <span class="visually-hidden">Логотип Ютуб</span>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--telegram" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">Мы в телеграмме</span>
-                <picture>
-                  <img src="images/content-vector/telegram-icon.svg" width="20" height="17" alt="Иконка Телеграмм">
-                </picture>
+              <a class="social__link social__link--telegram" href="#">
+                <span class="visually-hidden">Логотип Телеграмм</span>
               </a>
             </li>
           </ul>
         </div>
+        <hr>
         <div class="main-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
-            <img class="copyright__link-logo" src="images/content-vector/html-academy-logo.svg" width="27" height="34" alt="Логотип Академии HTML">
+            <span class="visually-hidden">Логотип HTML Academy</span>
           </a>
         </div>
       </div>

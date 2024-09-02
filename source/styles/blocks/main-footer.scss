@@ -1,0 +1,11 @@
+.main-footer {
+  background-color: $basic-background;
+}
+
+.main-footer__logo:hover {
+  opacity: 80%;
+}
+
+.main-footer__logo:active {
+  opacity: 60%;
+}

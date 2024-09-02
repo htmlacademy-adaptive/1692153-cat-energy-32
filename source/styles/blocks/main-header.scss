@@ -1,0 +1,59 @@
+.logo__text:hover {
+  opacity: 80%;
+}
+
+.logo__text:active {
+  opacity: 60%;
+}
+
+.logo__image:hover {
+  opacity: 80%;
+}
+
+.logo__image:active {
+  opacity: 60%;
+}
+
+.main-header__toggle {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  display: block;
+  width: 24px;
+  height: 22px;
+  cursor: pointer;
+  border: none;
+  background-color: $light-text-color;
+}
+
+.main-header__toggle::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 1px;
+  width: 24px;
+  height: 2px;
+  background-color: $title-color;
+  border: none;
+  box-shadow: 0 8px 0 0 $title-color, 0 16px 0 0 $title-color;
+}
+
+@media (min-width: $tablet-width) {
+  .main-header__toggle {
+    display: none;
+  }
+}
+
+.main-header__toggle:hover::before {
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow:
+    0 8px 0 0 rgba(0, 0, 0, 0.6),
+    0 16px 0 0 rgba(0, 0, 0, 0.6);
+}
+
+.main-header__toggle:active::before {
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 8px 0 0 rgba(0, 0, 0, 0.3),
+    0 16px 0 0 rgba(0, 0, 0, 0.3);
+}
