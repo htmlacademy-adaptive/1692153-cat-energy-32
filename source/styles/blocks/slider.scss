@@ -1,0 +1,58 @@
+.slider__button {
+  display: block;
+  position: relative;
+  width: 4px;
+  height: 512px;
+  background: $interactive-vector-background;
+  padding: 0;
+  border: none;
+  margin-left: 150px;
+
+  &:is(:hover, :focus-visible, :focus) {
+    background-color: $decoration-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+    background: $decoration-opacity-color;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    border: 2px solid $interactive-vector-background;
+    border-radius: 50%;
+    background-color: $basic-background;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:is(:hover, :focus-visible, :focus)::before {
+    border-color: $decoration-color;
+  }
+
+  &:active::before {
+    border-color: $decoration-opacity-color;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #666666;
+    width: 24px;
+    height: 18px;
+    mask-image: url("../../icons/stack.svg#controls");
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:is(:hover, :focus-visible, :focus)::after {
+    background-color: $decoration-color;
+  }
+}

@@ -1,3 +1,47 @@
+.advantages__list {
+  padding-top: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: start;
+  gap: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages__list {
+    padding: 0;
+    padding-bottom: 45px;
+    gap: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages__list {
+    display: flex;
+    flex-direction: row;
+    // justify-content: center;
+    gap: 80px;
+    padding: 82px 110px 71px;
+  }
+}
+
+.advantages__item {
+  margin: 0 auto;
+  width: 280px;
+  background-color: $basic-background;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages__item {
+    width: 708px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages__item {
+    width: 570px;
+  }
+}
+
 .advantages__title {
   font-family: $secondary-font;
   font-size: 24px;
@@ -5,6 +49,9 @@
   line-height: 37px;
   color: $title-color;
   text-transform: uppercase;
+  padding-left: 70px;
+  margin: 0;
+  margin-bottom: 29px;
 }
 
 .advantages__description {
@@ -12,9 +59,66 @@
 }
 
 .advantages__link {
+  position: relative;
   font-family: $secondary-font;
   font-style: 16px;
   line-height: 16px;
   color: $title-color;
   text-transform: uppercase;
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 6px;
+    left: 85px;
+    width: 32px;
+    height: 10px;
+    background-image: url("../../icons/stack.svg#icon-arrow");
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    transition: transform 0.3s linear;
+    transform-origin: left center;
+  }
+
+  &:is(:hover, :active, :focus-visible, :focus)::after {
+    transform: scale(1.35);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.advantages__item--cat-slim::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../../icons/stack.svg#cat-slim");
+  background-repeat: no-repeat;
+}
+
+// @media (min-width: $tablet-width) {
+//   .advantages__item--cat-slim::before {
+//     width: 200px;
+//     height: 211px;
+//     left: 445px;
+//   }
+
+//   .advantages__hr {
+//     display: none;
+//   }
+// }
+
+.advantages__item--cat-pro::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 67px;
+  height: 50px;
+  background-image: url("../../icons/stack.svg#cat-pro");
+  background-repeat: no-repeat;
 }

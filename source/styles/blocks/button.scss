@@ -10,4 +10,12 @@
   background-color: $decoration-color;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    background-color: $decoration-opacity-color;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }

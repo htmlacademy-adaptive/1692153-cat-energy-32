@@ -11,4 +11,25 @@
   line-height: 20px;
   color: $light-text-color;
   background-color: $decoration-color;
+  display: block;
+  width: 280px;
+  height: 290px;
+  background-image: url("../../images/backgrounds/gift-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/backgrounds/gift-background-mobile@2x.jpg");
+    background-size: 100% auto;
+  }
+}
+
+.extra-goods__gift::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 56px;
+  height: 65px;
+  background-image: url("../../icons/stack.svg#gift-icon");
+  background-repeat: no-repeat;
 }

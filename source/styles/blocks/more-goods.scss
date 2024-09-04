@@ -1,0 +1,32 @@
+.more-goods::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  padding-left: 250px;
+  background-image: url("../../icons/stack.svg#plus");
+}
+
+.more-goods__other-goods {
+  padding-top: 50px;
+}
+
+.more-goods__button {
+  text-align: center;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  width: 280px;
+  padding: 10px 44px;
+  color: $primary-text-color;
+  background-color: $basic-background;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: #ebebeb;
+  }
+}
