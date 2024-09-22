@@ -1,15 +1,105 @@
+.more-goods {
+  position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .more-goods {
+    margin-top: 100px;
+    margin-left: 30px;
+    padding-bottom: 1px;
+    border: 2px solid $basic-background;
+    width: 321px;
+    height: 425px;
+    // padding-left: 30px;
+    // padding: 50px, 20px, 40px;
+    // margin-left: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .more-goods {
+    margin-top: 97px;
+    border: 2px solid #d3d3d3;
+    margin-left: 110px;
+    width: 242px;
+
+  }
+}
+
 .more-goods::before {
   content: "";
   display: block;
   position: absolute;
   width: 30px;
   height: 30px;
-  padding-left: 250px;
+  left: 145px;
   background-image: url("../../icons/stack.svg#plus");
 }
 
+@media (min-width: $tablet-width) {
+  .more-goods::before {
+    width: 60px;
+    height: 60px;
+    top: 48px;
+    left: 132px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .more-goods::before {
+    top: 48px;
+    left: 92px;
+  }
+}
+
 .more-goods__other-goods {
-  padding-top: 50px;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  padding-top: 52px;
+  // padding-left: 58px;
+  margin-top: 25px;
+  margin-bottom: 8px;
+}
+
+@media (min-width: $tablet-width) {
+  .more-goods__other-goods {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 97px;
+    // margin-right: 40px;
+    margin-bottom: 29px;
+  }
+}
+
+
+.more-goods__description {
+  font-size: 12px;
+  line-height: 13px;
+  text-align: center;
+  // padding-left: 50px;
+  margin-bottom: 21px;
+}
+
+@media (min-width: $tablet-width) {
+  .more-goods__description {
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    margin-left: 77px;
+    margin-right: 77px;
+    margin-bottom: 87px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .more-goods__description {
+    margin-left: 37px;
+    margin-right: 37px;
+    margin-bottom: 92px;
+  }
 }
 
 .more-goods__button {
@@ -20,6 +110,8 @@
   text-transform: uppercase;
   width: 280px;
   padding: 10px 44px;
+  margin-bottom: 25px;
+  margin-left: 20px;
   color: $primary-text-color;
   background-color: $basic-background;
   border: none;
@@ -28,5 +120,22 @@
   &:hover,
   &:active {
     background-color: #ebebeb;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .more-goods__button {
+    width: 250px;
+    margin-left: 37px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .more-goods__button {
+    width: 169px;
+    margin-top: 0;
+    margin-left: 37px;
+    padding: 10px 0;
   }
 }

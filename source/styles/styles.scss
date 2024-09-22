@@ -1,5 +1,6 @@
 /* GLOBAL */
 @import "./common/variables.scss";
+@import "./common/mixins.scss";
 @import "./common/global.scss";
 @import "./common/fonts.scss";
 @import "./common/visually-hidden.scss";
@@ -11,7 +12,6 @@
 @import "./blocks/advantages.scss";
 @import "./blocks/nutrition.scss";
 @import "./blocks/example.scss";
-@import "./blocks/result.scss";
 @import "./blocks/slider.scss";
 @import "./blocks/address.scss";
 @import "./blocks/main-footer.scss";

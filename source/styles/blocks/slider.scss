@@ -1,12 +1,39 @@
+.slider {
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+@media (max-width: $mobile-width-only) {
+  .slider {
+    width: 320px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+	  margin-left: 340px;
+    width: 1440px;
+  }
+}
+
 .slider__button {
   display: block;
   position: relative;
   width: 4px;
-  height: 512px;
+  height: 256px;
   background: $interactive-vector-background;
   padding: 0;
   border: none;
-  margin-left: 150px;
+  z-index: 3;
+  margin: 0 auto;
+
 
   &:is(:hover, :focus-visible, :focus) {
     background-color: $decoration-color;
@@ -19,13 +46,13 @@
 
   &::before {
     content: "";
+    position: absolute;
     display: block;
     border: 2px solid $interactive-vector-background;
     border-radius: 50%;
     background-color: $basic-background;
     width: 40px;
     height: 40px;
-    position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -50,9 +77,73 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    z-index: 3;
   }
 
   &:is(:hover, :focus-visible, :focus)::after {
     background-color: $decoration-color;
   }
+}
+
+@media (min-width: $tablet-width) {
+  .slider__button {
+    margin-top: 123px;
+    height: 512px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__button {
+    margin-top: -545px;
+    margin-left: 715px;
+  }
+}
+
+.result__fat-cat {
+  position: absolute;
+  z-index: 1;
+  background-color: #eaeaea;
+  left: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .result__fat-cat {
+    background-color: $light-text-color;
+    left: 107px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .result__fat-cat {
+    background-color: #f2f2f2;
+    left: 433px;
+  }
+}
+
+.result__thin-cat {
+  position: absolute;
+  left: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .result__thin-cat {
+    left: 100px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .result__thin-cat {
+	left: 433px;
+}
+}
+
+.slider__slide--before {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider__slide--after {
+  position: absolute;
 }
