@@ -1,0 +1,17 @@
+.button {
+  text-align: center;
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  color: $light-text-color;
+  background-color: $decoration-color;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $decoration-opacity-color;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

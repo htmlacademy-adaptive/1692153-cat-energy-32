@@ -1,0 +1,245 @@
+.nutrition {
+  z-index: 23;
+}
+
+.nutrition__list {
+  padding-bottom: 55px;
+  padding-left: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition__list {
+    display: grid;
+    grid-template-columns: 230px 246px;
+    grid-template-rows: 280px 280px;
+    gap: 37px 153px;
+    padding-bottom: 46px;
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nutrition__list {
+    grid-template-columns: 230px 246px 248px 250px;
+    grid-template-rows: 280px;
+    gap: 0 83px;
+    padding-left: 110px;
+  }
+}
+
+.nutrition__item {
+  position: relative;
+  margin-bottom: 26px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nutrition__item:nth-child(2) {
+    margin-left: 10px;
+  }
+}
+
+.nutrition__title {
+  font-family: $secondary-font;
+  font-size: 36px;
+  line-height: 40px;
+  color: $title-color;
+  margin: 0;
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition__title {
+    font-size: 60px;
+    line-height: 60px;
+    padding-left: 30px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nutrition__title {
+    padding-left: 110px;
+  }
+}
+
+.nutrition__description {
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+  color: $primary-text-color;
+  padding-right: 20px;
+  padding-left: 80px;
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition__description {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 151 0 57px;
+  }
+}
+
+.nutrition__item--leaf::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-image: url("../../icons/stack.svg#icon-leaf");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition__item--leaf::before {
+    top: 40px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition__item--leaf::after {
+    content: "1";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 118px;
+    width: 112px;
+    height: 280px;
+    font-family: $secondary-font;
+    font-size: 280px;
+    line-height: 280px;
+    color: $basic-background;
+    z-index: -1;
+  }
+}
+
+.nutrition__item--pounder::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-image: url("../../icons/stack.svg#pounder-icon");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition__item--pounder::before {
+    top: 40px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nutrition__item--tableware {
+    left: 10px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition__item--pounder::after {
+    content: "2";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 113px;
+    width: 134px;
+    height: 280px;
+    font-family: $secondary-font;
+    font-size: 280px;
+    line-height: 280px;
+    color: $basic-background;
+    z-index: -1;
+  }
+}
+
+.nutrition__item--tableware::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-image: url("../../icons/stack.svg#tablewear-icon");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition__item--tableware::before {
+    top: 40px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition__item--tableware::after {
+    content: "3";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 114px;
+    width: 136px;
+    height: 280px;
+    font-family: $secondary-font;
+    font-size: 280px;
+    line-height: 280px;
+    color: $basic-background;
+    z-index: -1;
+  }
+}
+
+.nutrition__item--watch::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-image: url("../../icons/stack.svg#watch-icon");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition__item--watch::before {
+    top: 40px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition__item--watch::after {
+    content: "4";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 115px;
+    width: 136px;
+    height: 280px;
+    font-family: $secondary-font;
+    font-size: 280px;
+    line-height: 280px;
+    color: $basic-background;
+    z-index: -1;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .nutrition__hr {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition__hr {
+    display: block;
+    margin: 0;
+    border-color: $hr-color;
+  }
+}
